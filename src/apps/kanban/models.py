@@ -16,6 +16,7 @@ class Board(models.Model):
     .. versionadded:: 0.1
     """
     name = models.CharField(_('Name'), max_length=255)
+    author = models.ForeignKey(User)
     pub_date = models.DateTimeField(_('Created'), auto_now_add=True)
 
     class Meta:
