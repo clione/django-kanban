@@ -4,12 +4,15 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" media="screen" href="{% static 'css/bootstrap.css' %}"/>
         <link rel="stylesheet" media="screen" href="{% static 'css/screen.css' %}"/>
         {% block extracss %}
         {% endblock %}
         <link rel="shortcut icon" href="{% static 'assets/favicon.ico' %}" type="image/ico"/>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script src="{% static 'js/bootstrap.js' %}"></script>
         {% block extrajs %}
         {% endblock %}
     </head>
@@ -17,11 +20,13 @@
         <!--[if lt IE 9]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+        {% include 'menu.html' %}
+
         {% block content %}
         {% endblock %}
 
         {% block extrajsbottom %}
-        {% endblock %}        
+        {% endblock %} 
     </body>
 </html>
 

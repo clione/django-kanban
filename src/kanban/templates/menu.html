@@ -1,0 +1,14 @@
+<div class="head">
+    <ul class="nav nav-pills pull-right">
+        <li class="active">
+            <a href="#">{% trans 'Home' %}</a>
+        </li>
+        {% if not user.is_authenticated %}
+            <li><a href="#">{% trans 'Sign in' %}</a></li>
+            <li><a href="#">{% trans 'Sign up' %}</a></li>
+        {% else %}
+            <li><a href="#">{% trans 'Create Kanban' %}</a></li>
+            <li><a href="#">{% trans 'Sign out' %}</a></li>
+    </ul>
+    <h3>Kanban board</h3>
+</div>
