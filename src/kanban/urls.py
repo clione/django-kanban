@@ -1,17 +1,23 @@
-from django.conf.urls import patterns, include, url
+# Copyright 2013 Clione Software
+# Licensed under MIT license. See LICENSE for details.
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.conf import settings
+from django.conf.urls import patterns, include, url
+from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'kanban.views.home', name='home'),
-    # url(r'^kanban/', include('kanban.foo.urls')),
 
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^admin/', include(admin.site.urls)),
 
-    # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', 'kanban.views.home', name='home'),
+    
+    url(r'^kanban/', include('kanban.foo.urls')),
+
 )
+
+if settings.DEBUG:
+    # Serve static files
+    urlpatterns += staticfiles_urlpatterns()
