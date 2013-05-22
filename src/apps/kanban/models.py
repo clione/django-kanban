@@ -60,7 +60,7 @@ class Task(models.Model):
     """
     column = models.ForeignKey(Column)
     text = models.CharField(_('Name'), max_length=255)
-    responsible = models.CharField(_('Responsible'), max_length=255)
+    responsible = models.CharField(User)
     progress = models.PositiveIntegerField(_('Progress'))
     pub_date = models.CharField(_('Created'), auto_now_add=True)
 
