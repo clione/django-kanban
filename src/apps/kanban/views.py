@@ -13,3 +13,12 @@ from django.template import RequestContext
 from guardian.shortcuts import assign_perm, get_users_with_perms, remove_perm, \
                                get_perms
 from guardian.core import ObjectPermissionChecker
+
+
+def home(request):
+
+    """
+    Main index page of the platform.
+    """
+    return render_to_response('site_index.html',
+                              context_instance=RequestContext(request))

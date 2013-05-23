@@ -1,14 +1,16 @@
 # Copyright 2013 Clione Software
 # Licensed under MIT license. See LICENSE for details.
 
-ADD_TASK
+ADD_TASK = 'kanban-addtask'
 
-EDIT_TASK
+EDIT_TASK = 'kanban-edittask'
 
-DELETE_TASK
+DELETE_TASK = 'kanban-deletetask'
 
-ADD_BOARD
+ADD_BOARD = 'kanban-addboard'
 
-EDIT_BOARD
+EDIT_BOARD = 'kanban-editboard'
 
-DELETE_BOARD
+DELETE_BOARD = 'kanban-deleteboard'
+
+HOME = 'kanban-home'

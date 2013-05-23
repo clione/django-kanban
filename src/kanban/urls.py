@@ -11,10 +11,8 @@ admin.autodiscover()
 urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
-
-    url(r'^$', 'kanban.views.home', name='home'),
     
-    url(r'^kanban/', include('kanban.foo.urls')),
+    url(r'^$', include('apps.kanban.urls')),
 
 )
 
