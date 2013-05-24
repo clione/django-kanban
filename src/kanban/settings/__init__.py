@@ -7,7 +7,6 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 __version__ = defaults.__version__
-__status__ = defaults.__status__
 
 if DEBUG:
     from development import *

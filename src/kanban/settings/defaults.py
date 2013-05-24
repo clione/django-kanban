@@ -7,7 +7,7 @@ __version__ = "0.1"
 
 # Get the current working directory so we can fill automatically other variables.
 cwd = os.path.dirname(os.path.realpath(__file__)).strip('settings')
-# print "Current working dir: %s" % cwd
+print "Current working dir: %s" % cwd
 
 SITE_ID = 1
 ######## INTERNAZIONALIZATION ########
@@ -15,7 +15,7 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 LANGUAGES = (
-    ('es_ES', 'Español'),
+    ('es_ES', 'Espanol'),
     ('en_GB', 'English'),
     ('gl_ES', 'Galego'),
 )
@@ -84,6 +84,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+    'apps.kanban',
 )
 
 ######## LOGGING ###########

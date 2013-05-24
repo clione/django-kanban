@@ -63,7 +63,7 @@ class Task(models.Model):
     text = models.CharField(_('Name'), max_length=255)
     responsible = models.CharField(User)
     progress = models.PositiveIntegerField(_('Progress'))
-    pub_date = models.CharField(_('Created'), auto_now_add=True)
+    pub_date = models.DateTimeField(_('Created'), auto_now_add=True)
 
     class Meta:
         ordering = ['pub_date']

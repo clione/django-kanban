@@ -34,7 +34,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'e_cidadania/db/development.db',
+        'NAME': 'kanban/db/development.db',
         'USER': '',
         'PASSWORD': '',
         'HOST': '',
@@ -45,7 +45,7 @@ DATABASES = {
 SECRET_KEY = '21w$*^g1_9how(icw79u8s7jqp^yh0y%dqy6&t^k+&y7p61((-'
 
 FIXTURE_DIRS = (
-    (cwd + '/e_cidadania/fixtures/'),
+    (cwd + '/kanban/fixtures/'),
 )
 
 # Not needed with debug, but just in case we set it to all.
